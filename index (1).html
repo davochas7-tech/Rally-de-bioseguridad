@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="es">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infografía Interactiva - Rally de Bioseguridad</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700&amp;family=Outfit:wght=400;600;700;800&amp;display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clinicalBlue: '#00A8B5',
+                        clinicalDark: '#0A3B43',
+                        warningOrange: '#FF7F11',
+                        healthGreen: '#4CAF50',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+  <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #00A8B5;
+            border-radius: 10px;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+    </style>
+ </head>
+ <body class="bg-slate-50 font-sans text-slate-800 min-h-screen selection:bg-clinicalBlue selection:text-white">
+  <!-- Hero Header Section -->
+  <header class="relative bg-gradient-to-br from-clinicalDark via-slate-900 to-clinicalBlue text-white py-12 px-4 overflow-hidden shadow-xl">
+   <!-- Abstract background elements -->
+   <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
+   <div class="absolute -top-10 -right-10 w-40 h-40 bg-clinicalBlue rounded-full blur-3xl opacity-30"></div>
+   <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-warningOrange rounded-full blur-3xl opacity-25"></div>
+   <div class="max-w-5xl mx-auto text-center relative z-10">
+    <!-- Badges representing target health disciplines -->
+    <div class="flex flex-wrap justify-center gap-3 mb-6">
+     <span class="px-3 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5"> <i class="fa-solid fa-user-nurse"></i> Enfermería </span> <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5"> <i class="fa-solid fa-apple-whole"></i> Nutrición </span> <span class="px-3 py-1 bg-purple-500/20 text-purple-300 border border-purple-500/30 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-1.5"> <i class="fa-solid fa-person-walking-rehab"></i> Fisioterapia </span>
+    </div>
+    <h1 class="font-outfit text-4xl md:text-6xl font-extrabold tracking-tight mb-3">RALLY DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-emerald-300">BIOSEGURIDAD</span></h1>
+    <p class="text-lg md:text-xl text-slate-300 font-medium max-w-2xl mx-auto mb-8">¡Protege tu práctica, salva vidas! Demuestra que tu carrera tiene la mejor preparación clínica.</p>
+    <!-- Event Details Banner -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto bg-white/5 backdrop-blur-md rounded-2xl p-4 border border-white/10 mb-8">
+     <div class="flex items-center justify-center gap-3 p-2">
+      <div class="w-10 h-10 rounded-xl bg-clinicalBlue/20 flex items-center justify-center text-cyan-400">
+       <i class="fa-solid fa-calendar-day text-lg"></i>
+      </div>
+      <div class="text-left">
+       <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Fecha</p>
+       <p class="text-sm font-semibold">Lunes, 29 de Junio de 2026</p>
+      </div>
+     </div>
+     <div class="flex items-center justify-center gap-3 p-2 border-y md:border-y-0 md:border-x border-white/10">
+      <div class="w-10 h-10 rounded-xl bg-warningOrange/20 flex items-center justify-center text-warningOrange">
+       <i class="fa-solid fa-clock text-lg"></i>
+      </div>
+      <div class="text-left">
+       <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Hora</p>
+       <p class="text-sm font-semibold">11:00 AM CST</p>
+      </div>
+     </div>
+     <div class="flex items-center justify-center gap-3 p-2">
+      <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+       <i class="fa-solid fa-location-dot text-lg"></i>
+      </div>
+      <div class="text-left">
+       <p class="text-xs text-slate-400 uppercase font-bold tracking-wider">Lugar</p>
+       <p class="text-sm font-semibold">Canchas y Explanada Principal</p>
+      </div>
+     </div>
+    </div>
+    <!-- Main Interactive Content Container -->
+    <main class="max-w-6xl mx-auto px-9 py-12">
+     <!-- Section Header -->
+     <div class="text-center mb-12">
+      <h2 class="font-outfit text-2xl md:text-4xl font-bold text-slate-300 mb-2">Las 5 Pruebas del Circuito</h2>
+      <p class="text-slate-600 max-w-xl mx-auto">Haz clic en cada estación del circuito para desplegar y estudiar su objetivo, reglas, materiales y cómo serás evaluado.</p>
+     </div>
+     <!-- Interactive Map & Carousel Grid -->
+     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+      <!-- Left Side: Interactive Step Timeline (Lg: 5 columns) -->
+      <div class="lg:col-span-5 space-y-3">
+       <div class="bg-white rounded-2xl p-4 shadow-md border border-slate-100">
+        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-2">Selector de Actividades</h3>
+        <div class="space-y-2" id="activity-selector">
+         <!-- Activity 1 Button -->
+         <button onclick="selectActivity(1)" id="btn-act-1" class="w-full text-left p-3.5 rounded-xl border-2 border-clinicalBlue bg-clinicalBlue/5 text-slate-800 transition-all duration-300 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-clinicalBlue cursor-pointer"><span class="w-8 h-8 rounded-lg bg-clinicalBlue text-white font-bold flex items-center justify-center font-outfit text-sm">1</span>
+          <div class="flex-1 min-w-0">
+           <h4 class="font-bold text-sm text-slate-900 truncate">Misión Manos Limpias</h4>
+           <span class="text-xs text-clinicalBlue font-semibold flex items-center gap-1 mt-0.5"><i class="fa-solid fa-soap"></i> Higiene Clínica</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-clinicalBlue text-xs transition-transform duration-300" id="arrow-act-1"></i></button>
+         <!-- Activity 2 Button -->
+         <button onclick="selectActivity(2)" id="btn-act-2" class="w-full text-left p-3.5 rounded-xl border-2 border-transparent hover:border-slate-200 bg-slate-50 text-slate-800 transition-all duration-300 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-clinicalBlue cursor-pointer"><span class="w-8 h-8 rounded-lg bg-slate-300 text-slate-600 font-bold flex items-center justify-center font-outfit text-sm">2</span>
+          <div class="flex-1 min-w-0">
+           <h4 class="font-bold text-sm text-slate-900 truncate">Infección en el Turno</h4>
+           <span class="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5"><i class="fa-solid fa-flag"></i> Agilidad &amp; Conocimiento</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-slate-400 text-xs transition-transform duration-300" id="arrow-act-2"></i></button>
+         <!-- Activity 3 Button -->
+         <button onclick="selectActivity(3)" id="btn-act-3" class="w-full text-left p-3.5 rounded-xl border-2 border-transparent hover:border-slate-200 bg-slate-50 text-slate-800 transition-all duration-300 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-clinicalBlue cursor-pointer"><span class="w-8 h-8 rounded-lg bg-slate-300 text-slate-600 font-bold flex items-center justify-center font-outfit text-sm">3</span>
+          <div class="flex-1 min-w-0">
+           <h4 class="font-bold text-sm text-slate-900 truncate">Clasificación Relámpago RPBI</h4>
+           <span class="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5"><i class="fa-solid fa-biohazard"></i> Desechos Clínicos</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-slate-400 text-xs transition-transform duration-300" id="arrow-act-3"></i></button>
+         <!-- Activity 4 Button -->
+         <button onclick="selectActivity(4)" id="btn-act-4" class="w-full text-left p-3.5 rounded-xl border-2 border-transparent hover:border-slate-200 bg-slate-50 text-slate-800 transition-all duration-300 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-clinicalBlue cursor-pointer"><span class="w-8 h-8 rounded-lg bg-slate-300 text-slate-600 font-bold flex items-center justify-center font-outfit text-sm">4</span>
+          <div class="flex-1 min-w-0">
+           <h4 class="font-bold text-sm text-slate-900 truncate">Armadura Clínica (EPI)</h4>
+           <span class="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5"><i class="fa-solid fa-shield-halved"></i> Equipo de Protección</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-slate-400 text-xs transition-transform duration-300" id="arrow-act-4"></i></button>
+         <!-- Activity 5 Button -->
+         <button onclick="selectActivity(5)" id="btn-act-5" class="w-full text-left p-3.5 rounded-xl border-2 border-transparent hover:border-slate-200 bg-slate-50 text-slate-800 transition-all duration-300 flex items-center gap-4 focus:outline-none focus:ring-2 focus:ring-clinicalBlue cursor-pointer"><span class="w-8 h-8 rounded-lg bg-slate-300 text-slate-600 font-bold flex items-center justify-center font-outfit text-sm">5</span>
+          <div class="flex-1 min-w-0">
+           <h4 class="font-bold text-sm text-slate-900 truncate">Consultorio de los Horrores</h4>
+           <span class="text-xs text-slate-500 font-medium flex items-center gap-1 mt-0.5"><i class="fa-solid fa-magnifying-glass-chart"></i> Escape Room / Auditoría</span>
+          </div>
+          <i class="fa-solid fa-chevron-right text-slate-400 text-xs transition-transform duration-300" id="arrow-act-5"></i></button>
+        </div>
+       </div>
+      </div>
+      <!-- Right Side: Detailed Card View (Lg: 7 columns) -->
+      <div class="lg:col-span-7" id="spotlight-container">
+       <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden transform transition-all duration-500">
+        <!-- Dynamic Header Color Strip -->
+        <div id="card-header-accent" class="h-4 bg-gradient-to-r from-clinicalBlue to-emerald-400 transition-colors duration-500"></div>
+        <div class="p-6 md:p-8">
+         <!-- Activity Title & Badge -->
+         <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+          <div>
+           <span id="card-index" class="text-xs font-extrabold uppercase tracking-widest text-clinicalBlue">Actividad Estación 1</span>
+           <h3 id="card-title" class="font-outfit text-2xl md:text-3xl font-extrabold text-slate-950 mt-1">Misión Manos Limpias</h3>
+          </div>
+          <div id="card-badge" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-cyan-100 text-cyan-800 flex items-center gap-2">
+           <i class="fa-solid fa-soap"></i> Higiene Clínica
+          </div>
+         </div>
+         <!-- Objective Block -->
+         <div class="bg-slate-50 border-l-4 border-clinicalBlue p-4 rounded-r-xl mb-6 transition-colors duration-500" id="card-objective-border">
+          <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-1">Objetivo de la prueba</h4>
+          <p id="card-objective" class="text-slate-700 font-medium text-sm md:text-base leading-relaxed">Educar y evaluar de manera lúdica a los estudiantes del área de la salud sobre la correcta técnica de lavado clínico de manos utilizando estímulos visuales indirectos.</p>
+         </div>
+         <!-- Info Grid -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <!-- Materials -->
+          <div class="bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+           <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-2.5 flex items-center gap-1.5"><i class="fa-solid fa-toolbox text-clinicalBlue" id="card-icon-materials"></i> Materiales Requeridos</h4>
+           <ul id="card-materials" class="text-xs text-slate-600 space-y-1.5 list-disc pl-4 font-medium">
+            <li>Pintura acrílica (simulador de jabón).</li>
+            <li>Guantes de látex o nitrilo.</li>
+            <li>Toallitas húmedas para limpieza rápida.</li>
+            <li>Paliacates o antifaces para cubrir ojos.</li>
+            <li>Lámpara de luz ultravioleta (UV).</li>
+           </ul>
+          </div>
+          <!-- Evaluation System -->
+          <div class="bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+           <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-2.5 flex items-center gap-1.5"><i class="fa-solid fa-square-poll-horizontal text-clinicalBlue" id="card-icon-evaluation"></i> Sistema de Evaluación</h4>
+           <div id="card-evaluation" class="text-xs text-slate-600 font-medium space-y-2 leading-relaxed">Se evaluará visualmente la cobertura de pintura en los guantes. Zonas sin pintar representan fallas críticas en la fricción y técnica estandarizada por la OMS.</div>
+           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-[10px] font-extrabold uppercase text-slate-400">Evidencias:</span> <span id="card-evidence" class="text-xs font-semibold text-clinicalBlue flex items-center gap-1"> <i class="fa-solid fa-camera"></i> Registro Fotográfico </span>
+           </div>
+          </div>
+         </div>
+         <!-- Detailed Instructions -->
+         <div class="border-t border-slate-100 pt-6">
+          <h4 class="text-xs font-extrabold text-slate-400 uppercase tracking-widest mb-3 flex items-center gap-1.5"><i class="fa-solid fa-clipboard-list text-clinicalBlue" id="card-icon-instructions"></i> Instrucciones de Juego</h4>
+          <p id="card-instructions" class="text-sm text-slate-600 leading-relaxed font-medium">Los alumnos se colocan guantes de látex y se vendan los ojos. Se coloca una dosis de pintura acrílica en sus manos. Deberán simular la técnica completa de lavado de manos clínica (duración mínima 40s). Al finalizar, se retira la venda y se inspecciona bajo luz UV. Las zonas limpias sin pintar representan bacterias supervivientes.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- Quiz Segment ("Ponte a Prueba" Section) -->
+     <section class="bg-gradient-to-br from-slate-900 to-clinicalDark text-white rounded-3xl p-6 md:p-10 shadow-2xl relative overflow-hidden mb-16">
+      <!-- Background lights -->
+     </section>
+    </main>
+   </div>
+  </header>
+ </body>
+</html>
